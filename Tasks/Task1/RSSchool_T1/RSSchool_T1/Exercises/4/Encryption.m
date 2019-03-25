@@ -4,6 +4,7 @@
 
 // Complete the encryption function below.
 - (NSString *)encryption:(NSString *)string {
+    [string retain];
     int cols = ceil(sqrt(string.length));
     NSMutableString *encryptedString = [NSMutableString new];
     for (int i = 0; i < cols; i++) {
@@ -15,6 +16,7 @@
     [encryptedString deleteCharactersInRange: NSMakeRange([encryptedString length] - 1, 1)];
     NSString *result = [[encryptedString copy] autorelease];
     [encryptedString release];
+    [string release];
     return result;
 }
 
