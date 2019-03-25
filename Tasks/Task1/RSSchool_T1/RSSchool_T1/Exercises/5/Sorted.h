@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ResultObject : NSObject
-@property (nonatomic, strong) NSString *detail;
+@property (nonatomic, copy) NSString *detail;
 @property (nonatomic, assign) BOOL status;
 @end
 
