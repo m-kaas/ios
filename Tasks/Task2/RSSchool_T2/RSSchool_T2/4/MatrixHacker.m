@@ -6,8 +6,6 @@
 
 @implementation MatrixHacker
 - (void)injectCode:(id<Character> (^)(NSString *))theBlock {
-    //[_savedBlock release];
-    //_savedBlock = [theBlock copy];
     self.savedBlock = theBlock;
 }
 
