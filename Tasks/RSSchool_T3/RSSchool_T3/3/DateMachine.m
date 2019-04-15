@@ -152,7 +152,7 @@
         return YES;
     }
     switch (textField.tag) {
-        case 11: { // The dates should be in format 20/04/2004 04:20
+        case 11: {
             NSDateFormatter *dateFormatter = [NSDateFormatter new];
             dateFormatter.dateFormat = @"dd/MM/yyyy HH:mm";
             NSString *newText = [textField.text stringByReplacingCharactersInRange: range withString: string];
@@ -162,13 +162,13 @@
             }
             return YES;
         }
-        case 12: { // "Step" text field should allow only numbers
+        case 12: {
             if ([string rangeOfCharacterFromSet: [NSCharacterSet decimalDigitCharacterSet].invertedSet].location != NSNotFound) {
                 return NO;
             }
             return YES;
         }
-        case 13: { // "Date unit" should only allow these values: year, month, week, day, hour, minute
+        case 13: {
             if ([string rangeOfCharacterFromSet: [NSCharacterSet letterCharacterSet].invertedSet].location != NSNotFound) {
                 return NO;
             }

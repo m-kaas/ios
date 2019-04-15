@@ -61,16 +61,16 @@
 - (NSArray *)treeWithSubtreesLeft:(NSArray *)leftTree andRight:(NSArray *)rightTree {
     NSMutableArray *treeL = [NSMutableArray arrayWithArray: leftTree];
     NSMutableArray *treeR = [NSMutableArray arrayWithArray: rightTree];
-    NSMutableArray *fullTree = [NSMutableArray arrayWithObject: @"0"]; // root
-    int nodesInLevel = 1; // nodes count in level of full tree
+    NSMutableArray *fullTree = [NSMutableArray arrayWithObject: @"0"]; // root of full tree
+    int nodesInLevel = 1; // node count in level of subtree
     int index = 0; // starting index of level in subtree
     while (treeL.count != 0 || treeR.count != 0) {
-        for (int i = 0; i < nodesInLevel; i++) { // iterate through level in subtree
+        for (int i = 0; i < nodesInLevel; i++) { // iterate through level of left subtree
             if (![fullTree[(index + i + nodesInLevel - 1) / 2] isKindOfClass: [NSNull class]]) { // (index + i + nodesInLevel - 1) / 2 turns index of current node in subtree into index of its parent in full tree
                 if ([(NSString *)fullTree[(index + i + nodesInLevel - 1) / 2] isEqualToString: @"0"]) { // current node has value only if its parent in full tree is "0"
                     if (treeL.count == 0) { // left tree has ended
                         [fullTree addObject: @"null"];
-                    } else {
+                    } else { // use value from subtree, either it is "0" or "null"
                         [fullTree addObject: treeL.firstObject];
                         [treeL removeObjectAtIndex: 0];
                     }
@@ -79,12 +79,12 @@
             } // else use NSNull as a placeholder; placeholders in full tree are needed for correct call to parent
             [fullTree addObject: [NSNull null]];
         }
-        for (int i = 0; i < nodesInLevel; i++) {
+        for (int i = 0; i < nodesInLevel; i++) { // iterate through level of right subtree
             if (![fullTree[(index + i + 2 * nodesInLevel - 1) / 2] isKindOfClass: [NSNull class]]) {
                 if ([(NSString *)fullTree[(index + i + 2 * nodesInLevel - 1) / 2] isEqualToString: @"0"]) { // current node has value only if its parent in full tree is "0"
                     if (treeR.count == 0) { // rigth tree has ended
                         [fullTree addObject: @"null"];
-                    } else {
+                    } else { // use value from subtree, either it is "0" or "null"
                         [fullTree addObject: treeR.firstObject];
                         [treeR removeObjectAtIndex: 0];
                     }
