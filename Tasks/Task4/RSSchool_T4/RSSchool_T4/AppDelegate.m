@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "PhoneNumberViewController.h"
 
 @interface AppDelegate ()
 
@@ -8,10 +9,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    PhoneNumberViewController *phoneVC = [PhoneNumberViewController new];
+    window.backgroundColor = [UIColor whiteColor];
+    [window makeKeyAndVisible];
+    self.window = window;
+    [self.window setRootViewController: phoneVC];
+    [window release];
+    [phoneVC release];
     return YES;
 }
 

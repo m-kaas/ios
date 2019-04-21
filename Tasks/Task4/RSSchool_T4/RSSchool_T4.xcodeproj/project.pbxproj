@@ -12,6 +12,8 @@
 		BD47B5582268EDA10060BDF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD47B5562268EDA10060BDF3 /* LaunchScreen.storyboard */; };
 		BD47B55B2268EDA10060BDF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47B55A2268EDA10060BDF3 /* main.m */; };
 		BD47B5622268F8120060BDF3 /* PhoneNumber.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD47B5612268F8120060BDF3 /* PhoneNumber.pdf */; };
+		E3C04EAA22699DD4003C5E4B /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C04EA922699DD4003C5E4B /* PhoneNumberViewController.m */; };
+		E3C04EAC2269F125003C5E4B /* PhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C04EAB2269F125003C5E4B /* PhoneNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		BD47B5592268EDA10060BDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD47B55A2268EDA10060BDF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BD47B5612268F8120060BDF3 /* PhoneNumber.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PhoneNumber.pdf; sourceTree = "<group>"; };
+		E3C04EA822699DD4003C5E4B /* PhoneNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumberViewController.h; sourceTree = "<group>"; };
+		E3C04EA922699DD4003C5E4B /* PhoneNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberViewController.m; sourceTree = "<group>"; };
+		E3C04EAB2269F125003C5E4B /* PhoneNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneNumber.m; sourceTree = "<group>"; };
+		E3C04EAD2269F13A003C5E4B /* PhoneNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumber.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 				BD47B5612268F8120060BDF3 /* PhoneNumber.pdf */,
 				BD47B5512268ED9F0060BDF3 /* AppDelegate.h */,
 				BD47B5522268ED9F0060BDF3 /* AppDelegate.m */,
+				E3C04EA822699DD4003C5E4B /* PhoneNumberViewController.h */,
+				E3C04EA922699DD4003C5E4B /* PhoneNumberViewController.m */,
+				E3C04EAD2269F13A003C5E4B /* PhoneNumber.h */,
+				E3C04EAB2269F125003C5E4B /* PhoneNumber.m */,
 				BD47B5542268EDA10060BDF3 /* Assets.xcassets */,
 				BD47B5562268EDA10060BDF3 /* LaunchScreen.storyboard */,
 				BD47B5592268EDA10060BDF3 /* Info.plist */,
@@ -136,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C04EAA22699DD4003C5E4B /* PhoneNumberViewController.m in Sources */,
 				BD47B55B2268EDA10060BDF3 /* main.m in Sources */,
 				BD47B5532268ED9F0060BDF3 /* AppDelegate.m in Sources */,
+				E3C04EAC2269F125003C5E4B /* PhoneNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,12 +285,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BPJZ76T894;
 				INFOPLIST_FILE = RSSchool_T4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RSSchool.RSSchool-T4";
+				PRODUCT_BUNDLE_IDENTIFIER = RSSchool.RSSchoolT4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,12 +303,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BPJZ76T894;
 				INFOPLIST_FILE = RSSchool_T4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RSSchool.RSSchool-T4";
+				PRODUCT_BUNDLE_IDENTIFIER = RSSchool.RSSchoolT4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
