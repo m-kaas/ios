@@ -33,9 +33,8 @@
     phoneTextField.layer.cornerRadius = 7;
     phoneTextField.placeholder = @"+";
     phoneTextField.keyboardType = UIKeyboardTypePhonePad;
-    UILabel *flagView = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 50, 50)];
+    UIImageView *flagView = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 50, 50)];
     flagView.tag = 21;
-    flagView.textAlignment = NSTextAlignmentCenter;
     [phoneTextField setLeftViewMode: UITextFieldViewModeAlways];
     [phoneTextField setLeftView: flagView];
     [flagView release];
@@ -63,8 +62,8 @@
 - (void)phoneNumberChanged:(NSNotification *)notification {
     UITextField *textField = notification.object;
     self.phoneNumber.number = textField.text;
-    UILabel *flagLabel = [textField viewWithTag: 21];
-    flagLabel.text = [self.phoneNumber countryFlag];
+    UIImageView *flagLabel = [textField viewWithTag: 21];
+    flagLabel.image = [UIImage imageNamed: [NSString stringWithFormat: @"flag_%@", self.phoneNumber.country]];
     textField.text = self.phoneNumber.number;
 }
 

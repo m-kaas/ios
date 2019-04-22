@@ -9,6 +9,7 @@
 @interface PhoneNumber : NSObject
 
 @property (nonatomic, copy) NSString *number;
+@property (nonatomic, copy, readonly) NSString *country;
 
 -(NSString *)countryFlag;
 
